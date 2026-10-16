@@ -1,0 +1,108 @@
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --board-color: white;
+    --cell-hover-color: #ddd;
+    --button-color: #007BFF;
+    --button-hover-color: #0056b3;
+    --winning-line-color: #ffdddd;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-image: url(pexels-pok-rie-33563-1432669.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.game-container {
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(230, 225, 225, 0.548);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    border-radius: 10px;
+}
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: var(--board-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s;
+}
+.cell:hover {
+    background-color: var(--cell-hover-color);
+}
+.message {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.score {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.restart-button, .reset-score-button, .undo-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+.restart-button:hover, .reset-score-button:hover,.undo-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.winning-line {
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0% { background-color: var(--winning-line-color); }
+    50% { background-color: var(--board-color); }
+    100% { background-color: var(--winning-line-color); }
+}
+@media (max-width: 600px) {
+    .game-board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5em;
+    }
+}
+footer{
+    background: #28443fab;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 12px;
+}

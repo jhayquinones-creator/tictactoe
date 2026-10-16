@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe with Undo</title>
+    <link rel="stylesheet" href="tictactoe.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="top-buttons">
+            <button class="restart-button" onclick="restartGame()">Restart Game</button>
+            <button class="reset-score-button" onclick="resetScore()">Reset Score</button>
+        </div>
+        <div class="score"> X: <span id="scoreX">0</span> | O: <span id="scoreO">0</span></div>
+
+        <div class="game-board" id="gameBoard">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <div class="message" id="message"></div>
+        <div class="bottom-button">
+            <button class="undo-button" onclick="undoMove()">Undo Move</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2 0 2 5  .  Q u i ñ o n e s  ,  J h a y  S t e p h e n  A .  A l l  r i g h t s  R e s e r v e d . </p>
+    </footer>
+<script src="tictactoe.js"></script>
+
+</body>
+</html>
