@@ -27,12 +27,6 @@ pexels-pok-rie-33563-1432669.jpg
     Background image referenced by tictactoe.css. Keep it alongside the other
     project files so the image can load.
 
-image.png
-    Screenshot of the Tic-Tac-Toe game.
-
-SCREENSHOT
-----------
-See image.png in this folder for a screenshot of the game.
 
 HOW THE CODE WORKS
 ------------------
