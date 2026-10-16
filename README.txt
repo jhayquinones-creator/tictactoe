@@ -56,3 +56,19 @@ For a site URL that opens directly at the project root, GitHub Pages expects
 an index.html file in the published folder. Rename tictactoe.html to
 index.html before publishing, and keep the CSS, JavaScript, and image files
 in the same folder.
+
+DOCKER
+------
+Build the image from the project folder:
+
+    docker build -t tictactoe .
+
+Run the container and map port 8080 on your computer to port 80 in the
+container:
+
+    docker run --name tictactoe-game --rm -p 8080:80 tictactoe
+
+Open http://localhost:8080 in a web browser. Press Ctrl+C in the terminal to
+stop the container. The Dockerfile serves the game with Nginx and maps
+tictactoe.html to the default index.html page, so you do not need to rename
+the original file.
